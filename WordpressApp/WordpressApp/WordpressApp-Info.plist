@@ -6,10 +6,10 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>com.gsoc.test</string>
+			<string>com.gsoc.wordpressTestProtocol</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>gsocWordpressTestProtocol</string>
+				<string>wordpressTestProtocol</string>
 			</array>
 		</dict>
 	</array>

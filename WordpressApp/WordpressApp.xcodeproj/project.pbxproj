@@ -21,6 +21,8 @@
 		589BE2F01732C13300877692 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589BE2D11732C13300877692 /* Foundation.framework */; };
 		589BE2F81732C13300877692 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 589BE2F61732C13300877692 /* InfoPlist.strings */; };
 		589BE2FB1732C13300877692 /* WordpressAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 589BE2FA1732C13300877692 /* WordpressAppTests.m */; };
+		589BE3181732CA1400877692 /* TestWordpressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589BE3171732CA1400877692 /* TestWordpressController.m */; };
+		589BE3231732CC2D00877692 /* WordpressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589BE3221732CC2D00877692 /* WordpressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		589BE2F71732C13300877692 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		589BE2F91732C13300877692 /* WordpressAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordpressAppTests.h; sourceTree = "<group>"; };
 		589BE2FA1732C13300877692 /* WordpressAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordpressAppTests.m; sourceTree = "<group>"; };
+		589BE3161732CA1400877692 /* TestWordpressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestWordpressController.h; sourceTree = "<group>"; };
+		589BE3171732CA1400877692 /* TestWordpressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestWordpressController.m; sourceTree = "<group>"; };
+		589BE3211732CC2C00877692 /* WordpressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordpressView.h; sourceTree = "<group>"; };
+		589BE3221732CC2D00877692 /* WordpressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordpressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,10 @@
 				589BE2DE1732C13300877692 /* AppDelegate.h */,
 				589BE2DF1732C13300877692 /* AppDelegate.m */,
 				589BE2D61732C13300877692 /* Supporting Files */,
+				589BE3161732CA1400877692 /* TestWordpressController.h */,
+				589BE3171732CA1400877692 /* TestWordpressController.m */,
+				589BE3211732CC2C00877692 /* WordpressView.h */,
+				589BE3221732CC2D00877692 /* WordpressView.m */,
 			);
 			path = WordpressApp;
 			sourceTree = "<group>";
@@ -263,6 +273,8 @@
 			files = (
 				589BE2DC1732C13300877692 /* main.m in Sources */,
 				589BE2E01732C13300877692 /* AppDelegate.m in Sources */,
+				589BE3181732CA1400877692 /* TestWordpressController.m in Sources */,
+				589BE3231732CC2D00877692 /* WordpressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
