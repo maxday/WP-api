@@ -9,12 +9,16 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
+@synthesize globalController;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    globalController = [[TestController alloc] init];
+     NSLog(@"hihi");
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+     NSLog(@"hoho");
+    self.window.rootViewController = globalController;
+     NSLog(@"hihi");
     [self.window makeKeyAndVisible];
     return YES;
 }
