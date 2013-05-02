@@ -7,19 +7,20 @@
 //
 
 #import "TestController.h"
-#import "HomeView.h"
+
 
 @interface TestController ()
 
 @end
 
 @implementation TestController
+@synthesize myHomeView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        HomeView* myHomeView = [[HomeView alloc] init];
+        myHomeView = [[HomeView alloc] init];
         [myHomeView.sendBtn addTarget:self action:@selector(sendToWordpressApp:) forControlEvents:UIControlEventTouchUpInside];
         self.view = myHomeView;
     }
@@ -27,7 +28,17 @@
 }
 
 - (void) sendToWordpressApp:(id) sender {
-    NSLog(@"Je send");
+    
+ 
+    
+    NSURL* title = [NSURL URLWithString:[[myHomeView.title text] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSURL* post = [NSURL URLWithString:[[myHomeView.post text] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSString* protocolName = @"wordpressTestProtocol";
+    NSString* serviceName = @"createPost";
+    
+    NSString* urlToGo = [NSString stringWithFormat:@"%@://%@?title=%@&post=%@", protocolName, serviceName, title, post];
+    NSLog(@"%@", urlToGo);
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlToGo]];
 }
 
 - (void)viewDidLoad

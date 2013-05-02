@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomeView.h"
 
 @interface TestController : UIViewController
+
+@property(nonatomic, retain) HomeView* myHomeView;
 
 - (void) sendToWordpressApp:(id) sender;
 @end

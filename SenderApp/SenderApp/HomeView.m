@@ -10,26 +10,34 @@
 
 @implementation HomeView
 @synthesize sendBtn;
-@synthesize textToShare;
+@synthesize title;
+@synthesize post;
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         [self setBackgroundColor:[UIColor grayColor]];
         
-        textToShare = [[UITextField alloc] init];
-        [textToShare setFrame:CGRectMake(0, 0, 200, 50)];
-        [textToShare setCenter:CGPointMake(160, 100)];
-        [textToShare setBorderStyle:UITextBorderStyleLine];
-        [textToShare setText:@"Type text to share"];
+        title = [[UITextField alloc] init];
+        [title setFrame:CGRectMake(0, 0, 200, 50)];
+        [title setCenter:CGPointMake(160, 100)];
+        [title setBorderStyle:UITextBorderStyleLine];
+        [title setText:@"Title"];
+        
+        post = [[UITextField alloc] init];
+        [post setFrame:CGRectMake(0, 0, 200, 50)];
+        [post setCenter:CGPointMake(160, 150)];
+        [post setBorderStyle:UITextBorderStyleLine];
+        [post setText:@"Body"];
         
         
         sendBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [sendBtn setFrame:CGRectMake(0, 0, 200, 50)];
-        [sendBtn setCenter:CGPointMake(160, 180)];
+        [sendBtn setCenter:CGPointMake(160, 200)];
         [sendBtn setTitle:@"Share with Wordpress" forState:UIControlStateNormal];
         
-        [self addSubview:textToShare];
+        [self addSubview:title];
+        [self addSubview:post];
         [self addSubview:sendBtn];
 
         

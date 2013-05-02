@@ -10,7 +10,8 @@
 
 @interface HomeView : UIView
 
-@property (nonatomic, retain) UITextField* textToShare;
+@property (nonatomic, retain) UITextField* title;
+@property (nonatomic, retain) UITextField* post;
 @property (nonatomic, retain) UIButton* sendBtn;
 
 @end
