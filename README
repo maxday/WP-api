@@ -1,0 +1,18 @@
+The aim is to share data between two applications using CustomURL
+
+I write two iOS applications :
+
+SenderApp :  
+
+which displays two UITextFields to emulate the content which will be shared
+
+- one for the title of the post 
+- the other for the content
+
+and one UIButton to send the content to an FakeWordpressApp
+
+WordpressApp : 
+
+the fake WordpressApp
+
+- display the content pushed by the SenderApp application
