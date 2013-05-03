@@ -441,6 +441,7 @@
 				589BE2B81732C0B300877692 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		589BE2B91732C0B300877692 /* Build configuration list for PBXNativeTarget "SenderAppTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +450,7 @@
 				589BE2BB1732C0B300877692 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

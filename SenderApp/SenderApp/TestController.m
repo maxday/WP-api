@@ -9,6 +9,7 @@
 #import "TestController.h"
 
 
+
 @interface TestController ()
 
 @end
@@ -29,17 +30,28 @@
 
 - (void) sendToWordpressApp:(id) sender {
     
- 
-    
-    NSURL* title = [NSURL URLWithString:[[myHomeView.title text] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    NSURL* post = [NSURL URLWithString:[[myHomeView.post text] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    NSString* protocolName = @"wordpressTestProtocol";
+    /* http://stackoverflow.com/questions/8088473/url-encode-a-nsstring */
+    NSString* title = [myHomeView.title text];
+    title = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(
+                                                                        NULL,
+                                                                        (CFStringRef)title,
+                                                                        NULL,
+                                                                        (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                                        kCFStringEncodingUTF8 );
+    NSString* post = [myHomeView.post text];
+    post = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(
+                                                                         NULL,
+                                                                         (CFStringRef)post,
+                                                                         NULL,
+                                                                         (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                                         kCFStringEncodingUTF8 );    NSString* protocolName = @"wordpressTestProtocol";
     NSString* serviceName = @"createPost";
     
     NSString* urlToGo = [NSString stringWithFormat:@"%@://%@?title=%@&post=%@", protocolName, serviceName, title, post];
     NSLog(@"%@", urlToGo);
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlToGo]];
 }
+
 
 - (void)viewDidLoad
 {
